@@ -11,31 +11,28 @@ body {
   font-family: "Times New Roman", Times, serif; /* Utilise une police générique pour le corps du document */
   background-image: url(forest-1072828_1280.jpg); /* Définit l'image de fond */
   background-size: cover; /* Étire l'image de fond */
-  max-width: 100%; /* Rendre l'image responsive en limitant sa largeur à 100% de son conteneur */
 }
 
 
 header {
-  width: 100%; /* Ajuster la largeur du header à 100% */
-  height: auto; /* Ajuster la hauteur du header automatiquement en fonction du contenu */
+  min-height: 0vh; /* Définit la hauteur minimale de l'en-tête à 100% de la hauteur de la vue (viewport height) */
+  width: 0vw; /* Définit la largeur de l'en-tête à 100% de la largeur de la vue (viewport width) */
+  display: block; /* Affiche le logo en tant que bloc */
+  max-width: 100%; /* Empêche le logo de dépasser sa largeur maximale */
+  width: 0px; /* Définit une largeur fixe pour les images */
+  height: -50px; /* Définit une hauteur fixe pour les images */
+  margin: 30px; /* Ajoute une marge en haut et en bas et aligne les images au centre horizontalement */
+left: 0; /* Place la barre de navigation à l'extrême gauche de la page */
+border-radius: 50%; /* Ajoute une bordure arrondie aux images */
+width: 120px; /* Définit une largeur fixe pour les images */
+height: 100px; /* Définit une hauteur fixe pour les images */
+margin: 20px auto; /* Ajoute une marge en haut et en bas et aligne les images au centre horizontalement */
+opacity: 0.85;
 }
+
 
 header img {
-  display: block; /* Afficher l'image en tant que bloc pour appliquer les marges automatiques */
-  border-radius: 10%; /* Ajoute une bordure arrondie aux images */
-  margin: auto; /* Centrer l'image horizontalement et verticalement */
-  max-width: 100%; /* Rendre l'image responsive en limitant sa largeur à 100% de son conteneur */
-  height: auto; /* Permettre à la hauteur de l'image de s'ajuster automatiquement */
 }
-
-/* Ajuste la largeur maximale du header pour éviter qu'il ne devienne trop grand sur de grands écrans */
-@media screen and (min-width: 1200px) {
-  header {
-    max-width: 1200px; /* Définir une largeur maximale pour le header */
-    margin: 0 auto; /* Centrer le header horizontalement sur de grands écrans */
-  }
-}
-
 
 /* Style pour la barre de navigation fixée en haut espacement interne */
 .navbar {
@@ -61,6 +58,7 @@ header img {
 .navbar p {
   color: antiquewhite; /* Définit la couleur du texte des liens de la barre de navigation */
 }
+
 
 /* Style du logo de la barre de navigation avec une largeur fixe et une hauteur proportionnelle */
 .navbar .logo {
